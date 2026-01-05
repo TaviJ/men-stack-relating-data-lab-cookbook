@@ -7,6 +7,7 @@ const foodSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
+
 const userSchema = new mongoose.Schema(
   {
     username: { type: String, required: true },

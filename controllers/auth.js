@@ -37,6 +37,7 @@ router.post('/sign-up', async (req, res) => {
     
     await User.create(req.body);
   
+    
     res.redirect('/auth/sign-in');
   } catch (error) {
     console.log(error);

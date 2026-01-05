@@ -93,6 +93,7 @@ router.delete("/:itemId", async (req, res) => {
     user.pantry.id(req.params.itemId).deleteOne();
     await user.save();
 req.session.message = "Item deleted.";
+
 res.redirect(`/user/${userId}/foods`);
   } catch (err) {
     console.log(err);

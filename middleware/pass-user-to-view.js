@@ -5,4 +5,5 @@ const passUserToView = (req, res, next) => {
   next();
 };
 
+
 module.exports = passUserToView;
