@@ -1,9 +1,20 @@
 <nav>
+  <% if (message) { %>
+  <p><%= message %></p>
+<% } %>
+
   <a href="/">Home</a>
 
   <% if (user) { %>
-    <a href="/users/<%= user._id %>/foods">View My Pantry</a>
-    <a href="/users">Explore Community</a>
+    
+    <a href="/user/<%= user._id %>/foods">View My Pantry</a>
+
+    
+    <a href="/user/<%= user._id %>/foods/new">Add New Item</a>
+
+    <a href="/user">Explore Community</a>
+
+
     <a href="/auth/sign-out">Sign Out</a>
   <% } else { %>
     <a href="/auth/sign-in">Sign In</a>

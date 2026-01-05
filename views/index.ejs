@@ -1,24 +1,18 @@
+<!-- views/index.ejs -->
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Pantry</title>
-</head>
-<body>
-  <%- include("partials/_navbar") %>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cookbook</title>
 
-  <% if (user) { %>
-    <h1>Welcome to your pantry, <%= user.username %>!</h1>
-    <p>
-      <a href="/auth/sign-out">Sign out</a>
-    </p>
-  <% } else { %>
-    <h1>Welcome to your pantry, guest.</h1>
-    <p>
-      <a href="/auth/sign-up">Sign up</a> or
-      <a href="/auth/sign-in">Sign in</a>.
-    </p>
-  <% } %> 
-</body>
+  </head>
+  <body>
+    <%- include('./partials/_navbar.ejs') %>
+    <h1>Welcome to Cookbook</h1>
+    <p>The Pantry App</p>
+    <a href="/auth/sign-up">Sign up</a>
+    <a href="/auth/sign-in">Sign in</a>
+  </body>
 </html>

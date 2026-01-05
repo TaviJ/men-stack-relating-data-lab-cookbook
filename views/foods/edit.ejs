@@ -3,10 +3,14 @@
 
   <h1>Edit Pantry Item</h1>
 
-  <form action="/users/<%= userId %>/foods/<%= food._id %>?_method=PUT" method="POST">
+  <form action="/user/<%= user._id %>/foods/<%= food._id %>?_method=PUT" method="POST">
+
     <label>Name:</label>
     <input type="text" name="name" value="<%= food.name %>" required>
-
+    <label>Quantity:</label>
+    <input type="number" name="quantity" value="<%= food.quantity %>" min="1" required>
+    <label>Expiration Date:</label>
+    <input type="date" name="expirationDate" value="<%= food.expirationDate %>" />  
     <button>Save Changes</button>
   </form>
 </body>
