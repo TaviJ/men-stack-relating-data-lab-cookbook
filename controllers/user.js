@@ -7,7 +7,7 @@ const User = require("../models/user.js");
 
 router.get("/", async (req, res) => {
   try {
-    const users = await User.find({}, "username"); // only grab username
+    const users = await User.find({}, "username"); 
     res.render("user/index.ejs", { users });
   } catch (err) {
     console.log(err);
