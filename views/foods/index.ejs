@@ -10,7 +10,7 @@
 
   <h1>Welcome to my Pantry</h1>
 
-  <!-- ✅ users (plural) -->
+
   <a href="/user/<%= user._id %>/foods/new">Add New Item</a>
 
   <% if (!pantry || pantry.length === 0) { %>
@@ -21,10 +21,10 @@
         <li>
           <%= item.name %>
 
-          <!-- ✅ EDIT needs item._id -->
+          
           <a href="/user/<%= user._id %>/foods/<%= item._id %>/edit">Edit</a>
 
-          <!-- ✅ DELETE needs a form + method override -->
+         
           <form
             action="/user/<%= user._id %>/foods/<%= item._id %>?_method=DELETE"
             method="POST"

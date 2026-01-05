@@ -1,10 +1,10 @@
-// controllers/users.js
+
 
 const express = require("express");
 const router = express.Router();
 const User = require("../models/user.js");
 
-// COMMUNITY INDEX - GET /users
+
 router.get("/", async (req, res) => {
   try {
     const users = await User.find({}, "username"); // only grab username
@@ -15,7 +15,7 @@ router.get("/", async (req, res) => {
   }
 });
 
-// COMMUNITY SHOW - GET /users/:userId
+
 router.get("/:userId", async (req, res) => {
   try {
     const foundUser = await User.findById(req.params.userId);

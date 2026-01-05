@@ -24,7 +24,7 @@ mongoose.connection.on('connected', () => {
 
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride('_method'));
-// app.use(morgan('dev'));
+
 app.use(
   session({
     secret: process.env.SESSION_SECRET,
@@ -43,14 +43,14 @@ app.get('/', (req, res) => {
 
 app.use("/auth", authController);
 
-// Protect everything after auth
+
 app.use(isSignedIn);
 
-// Community routes
+
 
 app.use("/user", userController);
 
-// Pantry routes (embedded foods)
+
 app.use("/user/:userId/foods", foodsController);
 
 app.listen(port, () => {
